@@ -29,6 +29,10 @@ var _neo4jApi = require('./database/neo4jApi');
 
 var _neo4jApi2 = _interopRequireDefault(_neo4jApi);
 
+var _serveStatic = require('serve-static');
+
+var _serveStatic2 = _interopRequireDefault(_serveStatic);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // This function init the database
@@ -66,10 +70,10 @@ app.use(function (err, req, res, next) {
 });
 
 // configure port and listen for requests
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 var server = exports.server = app.listen(port, function () {
   (0, _fancyLog2.default)('Server is running on http://localhost:' + port + ' ');
 });
 
-exports.default = app;
+exports.default = server;

@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import router from './routes';
 import db from './database/neo4jApi';
+import serveStatic from 'serve-static';
 
 // This function init the database
 db.init();
@@ -48,4 +49,4 @@ export const server = app.listen(port, () => {
   log(`Server is running on http://localhost:${port} `);
 });
 
-export default app;
+export default server;
