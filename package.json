@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "just a simple crud",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "nodemon --watch src --exec babel-node ./src/app.js",
+    "build": "babel src -d dist --copy-files",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fancy-log": "^1.3.3",
+    "neo4j-driver": "^4.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
