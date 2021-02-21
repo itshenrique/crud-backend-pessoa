@@ -42,7 +42,7 @@ app.use((err, req, res, next) => {
 });
 
 // configure port and listen for requests
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 export const server = app.listen(port, () => {
   log(`Server is running on http://localhost:${port} `);
