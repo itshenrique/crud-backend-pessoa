@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/app.js",
     "dev": "nodemon --watch src --exec babel-node ./src/app.js",
-    "build": "babel src -d build --copy-files",
+    "build": "babel src -d dist --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
